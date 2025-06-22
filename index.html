@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Click Quest - The Ultimate Clicker Game</title>
-    <meta name="description" content="Experience the most satisfying clicking game ever! Click, upgrade, and unlock achievements in this addictive clicker adventure." />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
-    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Click Quest</title>
+  <style>
+    body {
+      font-family: "Nunito", sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #fef2e4;
+    }
+    h1 {
+      font-family: "Fredoka One", cursive;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    #clickButton {
+      padding: 15px 30px;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    #counter {
+      font-size: 2em;
+      margin-top: 20px;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Click Quest</h1>
+  <button id="clickButton">Click Me!</button>
+  <div id="counter">0</div>
+
+  <script>
+    let count = 0;
+    const counter = document.getElementById('counter');
+    document.getElementById('clickButton').addEventListener('click', () => {
+      count++;
+      counter.textContent = count;
+    });
+  </script>
+</body>
 </html>
